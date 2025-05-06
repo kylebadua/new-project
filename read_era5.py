@@ -6,3 +6,5 @@ import pandas as pd
 filepath = "era5_folder/era5_Data.nc"
 ds = xr.open_dataset(filepath)
 ds_init = ds.isel(time=0, drop=True)
+
+ds_init.hgt.plot()
